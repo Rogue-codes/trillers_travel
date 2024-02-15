@@ -1,10 +1,11 @@
-"use client"
+"use client";
 import { Avatar } from "@/assets";
 import { Activity, Airplane, Box1, Setting, Wallet } from "iconsax-react";
 import Image from "next/image";
 import React from "react";
 import { useRouter, usePathname } from "next/navigation";
- 
+import { sideBarArr } from "@/utils";
+
 function SidebarComponent() {
   const router = useRouter();
   const pathname = usePathname();
@@ -18,31 +19,31 @@ function SidebarComponent() {
         <p className="text-sm font-medium">Adu.deraj@gmail.com</p>
       </div>
       <div className="flex text-white text-base font-medium flex-col items-start justify-start gap-5 w-full">
-        <div className="flex items-start justify-start py-3 px-5 gap-4" onClick={() => router.push("/")}>
-          <Box1 variant="Linear" color="#c99c33" size={24} />
-          <p className="flex">Dashboard</p>
-        </div>
-        <div className={`${pathname === "/flights" ? "bg-[#e2eceb] px-5 text-black rounded-l-3xl" : "bg-none text-white"} py-3 px-5 w-full flex items-start justify-start gap-4 relative`} onClick={() => router.push("/flights")}>
-          <Airplane variant="Linear" color="#c99c33" size={24} />
-          <p className="flex">Flights</p>
-          <div className="curved-side"></div>
-        </div>
-        <div className="flex items-start justify-start py-3 px-5 gap-4">
-          <Wallet variant="Linear" color="#c99c33" size={24} />
-          <p className="flex">Wallet</p>
-        </div>
-        <div className="flex items-start justify-start py-3 px-5 gap-4">
-          <Box1 variant="Linear" color="#c99c33" size={24} />
-          <p className="flex">Report</p>
-        </div>
-        <div className="flex items-start justify-start py-3 px-5 gap-4">
-          <Activity variant="Linear" color="#c99c33" size={24} />
-          <p className="flex">Statistics</p>
-        </div>
-        <div className="flex items-start justify-start py-3 px-5 gap-4">
-          <Setting variant="Linear" color="#c99c33" size={24} />
-          <p className="flex">Settings</p>
-        </div>
+        {sideBarArr.map((element, index) => (
+          <div
+            className={`${index===1 && "bg-[#e2eceb] px-5 text-black rounded-l-3xl w-full relative "} flex items-start justify-start py-3 px-5 gap-4`}
+            onClick={() => router.push(element.link)}
+            key={index}
+          >
+            {index === 0 ? (
+              <Box1 variant="Linear" color="#c99c33" size={24} />
+            ) : index === 1 ? (
+              <Airplane variant="Linear" color="#c99c33" size={24} />
+            ) : index === 2 ? (
+              <Wallet variant="Linear" color="#c99c33" size={24} />
+            ) : index === 3 ? (
+              <Box1 variant="Linear" color="#c99c33" size={24} />
+            ) : index === 4 ? (
+              <Activity variant="Linear" color="#c99c33" size={24} />
+            ) : (
+              <Setting variant="Linear" color="#c99c33" size={24} />
+            )}
+            <p className="flex">{element.label}</p>
+            {
+              index === 1 && <div className="curved-side"></div>
+            }
+          </div>
+        ))}
       </div>
     </div>
   );

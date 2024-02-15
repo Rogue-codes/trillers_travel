@@ -23,7 +23,7 @@ const BookingCard: React.FC<BookingCardProps> = ({
   price,
 }) => {
   return (
-    <div className='bg-white border-b-2 border-dashed flex font-normal text-[#425c5a] items-start justify-between py-6 px-6 w-[34rem] rounded-xl'>
+    <div className='bg-white relative border-b-2 border-dashed flex font-normal text-[#425c5a] items-start justify-between py-6 px-6 w-[34rem] rounded-xl'>
       <div className="w-[50px] h-[50px] flex items-center justify-center">
         <Image className="rounded-full w-full h-full" src={avatarSrc} alt='' />
       </div>
@@ -40,12 +40,15 @@ const BookingCard: React.FC<BookingCardProps> = ({
         <p className="font-semi-bold text-xl">{destination}</p>
         <p className='ml-4 text-sm'>{arrivalTime}</p>
       </div>
-      <div className="flex flex-col items-end justify-end">
+      <div className="flex flex-col items-end gap-2 justify-end">
         <p className="flex flex-end font-semibold text-base">${price}</p>
         <button className="flex  gap-3 items-center justify-center bg-[#c99c33] py-2 px-5 rounded-2xl w-[7rem] text-white">
           <p className="flex">SEARCH</p>
         </button>
       </div>
+
+      <div className="w-6 h-6 rounded-full top-28 -left-2 z-50 absolute bg-[#e1eceb]"></div>
+      <div className="w-6 h-6 rounded-full top-28 -right-2 z-50 absolute bg-[#e1eceb]"></div>
     </div>
   );
 };
