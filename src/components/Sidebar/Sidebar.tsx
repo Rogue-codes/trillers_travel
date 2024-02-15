@@ -10,7 +10,7 @@ function Sidebar() {
   const pathname = usePathname();
   return (
     <div className="w-[250px] cursor-pointer flex flex-col py-12 gap-6 items-start justify-start h-screen rounded-3xl bg-[#3d5654] left-0 top-0 fixed">
-      <div className="flex flex-col items-center justify-center">
+      <div className="flex flex-col items-center text-white justify-center ml-4">
         <div className="w-[50px] h-[50px] flex items-center justify-center">
           <Image className="rounded-full w-full h-full" src={Avatar} alt="" />
         </div>
@@ -22,10 +22,10 @@ function Sidebar() {
           <Box1 variant="Linear" color="#c99c33" size={24} />
           <p className="flex">Dashboard</p>
         </div>
-        <div className={`${pathname === "/flights" ? "bg-[#e2eceb] px-5 text-black rounded-l-3xl rounded-tr-3xl rounded-br-3xl" : "bg-none text-white"} py-3 px-5 w-full flex items-start justify-start gap-4 relative`} onClick={() => router.push("/flights")}>
+        <div className={`${pathname === "/flights" ? "bg-[#e2eceb] px-5 text-black rounded-l-3xl" : "bg-none text-white"} py-3 px-5 w-full flex items-start justify-start gap-4 relative`} onClick={() => router.push("/flights")}>
           <Airplane variant="Linear" color="#c99c33" size={24} />
           <p className="flex">Flights</p>
-          {/* <div className="absolute z-20 mt-[-30px] ml-[12rem] p-6`` bg-yellow-700 w-10 h-10 rounded-full"></div> */}
+          <div className="curved-side"></div>
         </div>
         <div className="flex items-start justify-start py-3 px-5 gap-4">
           <Wallet variant="Linear" color="#c99c33" size={24} />
