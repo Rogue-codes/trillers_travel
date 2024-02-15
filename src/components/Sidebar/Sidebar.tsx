@@ -1,15 +1,15 @@
 "use client"
 import { Avatar } from "@/assets";
-import { Activity, Airplane, Box1, MusicDashboard, Setting, Wallet } from "iconsax-react";
+import { Activity, Airplane, Box1, Setting, Wallet } from "iconsax-react";
 import Image from "next/image";
 import React from "react";
 import { useRouter, usePathname } from "next/navigation";
  
-function Sidebar() {
+function SidebarComponent() {
   const router = useRouter();
   const pathname = usePathname();
   return (
-    <div className="w-[250px] cursor-pointer flex flex-col py-12 gap-6 items-start justify-start h-screen rounded-3xl bg-[#3d5654] left-0 top-0 fixed">
+    <div className="w-[250px] cursor-pointer flex flex-col py-12 gap-6 items-start justify-start h-screen rounded-r-3xl bg-[#3d5654] left-0 top-0 fixed">
       <div className="flex flex-col items-center text-white justify-center ml-4">
         <div className="w-[50px] h-[50px] flex items-center justify-center">
           <Image className="rounded-full w-full h-full" src={Avatar} alt="" />
@@ -48,4 +48,4 @@ function Sidebar() {
   );
 }
 
-export default Sidebar;
+export default SidebarComponent;

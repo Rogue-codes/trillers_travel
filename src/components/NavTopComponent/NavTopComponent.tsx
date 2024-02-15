@@ -62,13 +62,15 @@ function Navbar() {
         </Select>
       </div>
       <div className="second w-full flex items-start justify-between">
-        <Tabs defaultValue="account" className="w-[30rem] relative">
-          <TabsList className="w-full bg-[#e1eceb]  rounded-2xl flex items-start justify-between">
+        <Tabs defaultValue="account" className="w-[30rem] border-2 border-bl relative">
+          <TabsList className="w-full bg-[#e1eceb] rounded-2xl flex items-start justify-between">
             <TabsTrigger className="rounded-2xl flex items-center justify-center text-black text-sm font-normal w-[8rem]" value="one-way">ONE WAY</TabsTrigger>
             <TabsTrigger className="rounded-2xl flex items-center justify-center text-black text-sm font-normal w-[8rem]" value="round-trip">ROUND TRIP</TabsTrigger>
             <TabsTrigger className="rounded-2xl flex items-center justify-center text-black text-sm font-normal w-[8rem]" value="multi-city">MULTI CITY</TabsTrigger>
           </TabsList>
-          <TabsContent className="absolute z-30" value="one-way"><OneWayComponent /></TabsContent>
+          <TabsContent className="absolute z-30 overflow-y-scroll" value="one-way">
+            <OneWayComponent />
+          </TabsContent>
           <TabsContent value="round-trip">Change your password here.</TabsContent>
           <TabsContent value="multi-city">Change your password here.</TabsContent>
         </Tabs>
@@ -76,9 +78,9 @@ function Navbar() {
           <Briefcase variant="Bold" color="#3d5654" size={20} />
           <p className="flex">FIRST CLASS</p>
         </div>
-        <div className="flex gap-3 items-center justify-center bg-[#c99c33] py-2 px-5 rounded-2xl w-[12rem] text-white">
+        <button className="flex gap-3 items-center justify-center bg-[#c99c33] py-2 px-5 rounded-2xl w-[12rem] text-white">
           <p className="flex">SEARCH</p>
-        </div>
+        </button>
       </div>
     </div>
   );
