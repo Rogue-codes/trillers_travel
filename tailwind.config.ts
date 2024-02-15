@@ -8,10 +8,18 @@ const config: Config = {
   ],
   theme: {
     extend: {
+      color: {
+        green: {
+          300:"#425c5a",
+          700: "#3d5654"
+        },
+        blue: {
+          200: "#e2eceb"
+        }
+      },
       backgroundImage: {
         // "desktop": "url('../assets/background.jpg')" 
         // 'hero-pattern': "url('/img/hero-pattern.svg')",
-
       },
     },
   },

@@ -18,11 +18,9 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <div className="flex items-center justify-center bg-desktop" style={{backgroundImage: `url("../assets/background.jpg")`}} >
         <Sidebar />
         <Navbar />
       <body className={inter.className}>{children}</body>
-      </div>
     </html>
   );
 }
