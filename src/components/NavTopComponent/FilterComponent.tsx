@@ -39,7 +39,6 @@ function FilterComponent({
     setDestination(temp);
   };
 
-
   return (
     <div className="bg-white z-[99] rounded-3xl fixed flex flex-col items-start justify-start gap-9 px-5 py-4 w-[60rem]">
       <div className="first w-full flex items-center justify-between">
