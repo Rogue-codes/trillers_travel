@@ -21,7 +21,7 @@ function SidebarComponent() {
       <div className="flex text-white text-base font-medium flex-col items-start justify-start gap-5 w-full">
         {sideBarArr.map((element, index) => (
           <div
-            className={`${index===1 && "bg-[#e2eceb] px-5 text-black rounded-l-3xl w-full relative "} flex items-start justify-start py-3 px-5 gap-4`}
+            className={`${index === 1 && "bg-[#e2eceb] px-5 text-black rounded-l-3xl w-full relative "} flex items-start justify-start py-3 px-5 gap-4`}
             onClick={() => router.push(element.link)}
             key={index}
           >

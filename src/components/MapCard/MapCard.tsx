@@ -21,9 +21,9 @@ function MapCard() {
             <div className='mb-2'>
             <Image className='w-full h-full mt-8' src={Map} alt="" />
             </div>
-            <Tabs defaultValue="account" className="w-full  bg-[#3d5654] relative">
+            <Tabs defaultValue="one-way" className="w-full  bg-[#3d5654] relative">
           <TabsList className="w-full bg-[#3d5654] flex mt-4 items-start justify-between">
-            <TabsTrigger className="rounded-2xl text-white data-[state=active]:bg-[#c99c33] data-[state=active]:text-white flex items-center justify-center text-sm font-normal w-[8rem]" value="one-way">ONE WAY</TabsTrigger>
+            <TabsTrigger className="rounded-2xl text-white data-[state=active]:bg-[#c99c33] data-[state=active]:text-white flex  items-center justify-center text-sm font-normal w-[8rem]" data-state="active" value="one-way">ONE WAY</TabsTrigger>
             <TabsTrigger className="rounded-2xl flex items-center justify-center text-sm font-normal w-[8rem] text-white data-[state=active]:bg-[#c99c33] data-[state=active]:text-white" value="round-trip">ROUND TRIP</TabsTrigger>
             <TabsTrigger className="rounded-2xl flex items-center justify-center text-white data-[state=active]:bg-[#c99c33] data-[state=active]:text-white text-sm font-normal w-[8rem]" value="multi-city">MULTI CITY</TabsTrigger>
           </TabsList>
