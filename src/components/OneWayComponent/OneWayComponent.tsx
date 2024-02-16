@@ -7,7 +7,7 @@ import {
     SelectValue,
 } from "@/components/ui/select"
 import BookingCard from '../BookingCard/BookingCard';
-import { Avatar, Logo } from '@/assets';
+import { Logo } from '@/assets';
 import MapCard from '../MapCard/MapCard';
 
 function OneWayComponent() {
