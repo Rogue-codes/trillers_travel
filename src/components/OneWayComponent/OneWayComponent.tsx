@@ -49,7 +49,7 @@ function OneWayComponent() {
                         destination="BOOM"
                         arrivalTime="14:20"
                         price="1,572" />
-                 
+
                     <BookingCard
                         avatarSrc={Logo}
                         origin="JFK"
@@ -59,9 +59,9 @@ function OneWayComponent() {
                         destination="BOOM"
                         arrivalTime="14:20"
                         price="1,572" />
-                
+
                     <BookingCard
-                        avatarSrc={Logo }
+                        avatarSrc={Logo}
                         origin="JFK"
                         departureTime="13:00"
                         airline="LUFTHANSA"
@@ -69,9 +69,9 @@ function OneWayComponent() {
                         destination="BOOM"
                         arrivalTime="14:20"
                         price="1,572" />
-                
+
                     <BookingCard
-                        avatarSrc={Logo }
+                        avatarSrc={Logo}
                         origin="JFK"
                         departureTime="13:00"
                         airline="EMIRATES"
